@@ -1,0 +1,27 @@
+{
+  "name": "npm-test-project",
+  "version": "0.0.1",
+  "description": "My first npm project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serto/npm-test-project.git"
+  },
+  "keywords": [
+    "npm",
+    "boilerplate",
+    "frontend"
+  ],
+  "author": "Serto MS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/serto/npm-test-project/issues"
+  },
+  "homepage": "https://github.com/serto/npm-test-project#readme",
+  "devDependencies": {
+    "node-sass": "^3.7.0"
+  }
+}
