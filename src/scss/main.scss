@@ -1,16 +1,22 @@
+$main-color: #000000;
+$background-color: #ff0000;
+$first-color: #ffffff;
+$second-color: #ffee00;
+
+
 body {
-	background-color: green;
+  background-color: $background-color;
 }
 
 h1 {
-	color: black;
-	display: flex;
+  color: $main-color;
+  display: flex;
 }
 
 h2 {
-	color: white;
+  color: $first-color;
 }
 
 .backgnd {
-	background-color: yellow;
+  background-color: $second-color;
 }
