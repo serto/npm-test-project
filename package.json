@@ -4,7 +4,14 @@
   "description": "My first npm project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css": "node-sass -o dist/css src/scss --output-style compressed --source-map-embed",
+    "autoprefixer": "postcss -u autoprefixer --autoprefixer.browsers '> 5%, ie 9' -r dist/css/*",
+    "build:css": "npm run css && npm run autoprefixer",
+    "js": "babel src/js --out-dir dist/js",
+    "watch:css": "onchange src/scss/*.scss -- npm run build:css",
+    "watch:js": "onchange src/js/*.js -- npm run js",
+    "serve": "browser-sync start --server dist --files dist",
+    "dev": "parallelshell 'npm run watch:css' 'npm run watch:js' 'npm run serve'"
   },
   "repository": {
     "type": "git",
@@ -22,6 +29,13 @@
   },
   "homepage": "https://github.com/serto/npm-test-project#readme",
   "devDependencies": {
-    "node-sass": "^3.7.0"
+    "autoprefixer": "^6.3.6",
+    "babel-cli": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "browser-sync": "^2.12.10",
+    "node-sass": "^3.7.0",
+    "onchange": "^2.4.0",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.5.2"
   }
 }
