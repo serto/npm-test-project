@@ -15,8 +15,17 @@ h1 {
 
 h2 {
   color: $first-color;
+  float: right;
 }
 
 .backgnd {
   background-color: $second-color;
+}
+
+p {
+  color: blue;
+  display: block;
+  position: absolute;
+  height: 15px;
+  width: 20px;
 }
